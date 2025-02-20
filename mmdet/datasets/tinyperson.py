@@ -121,8 +121,8 @@ class TinyPersonDataset(BaseDetDataset):
         instances = []
         for i, ann in enumerate(ann_info):
             instance = {}
-            if ann.get('ignore', False):
-                continue
+            # if ann.get('ignore', False):
+            #     continue
 
             x1, y1, w, h = ann['bbox']
             inter_w = max(0, min(x1 + w, img_info['width']) - max(x1, 0))
